@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import {colors} from "../../Assets"
+import {NavLink} from "react-router-dom";
 
+
+export const Container = styled('div')`
+  position: fixed;
+`
 
 export const Button = styled('button')`
   align-items: center;
@@ -71,12 +76,12 @@ export const SlickBar = styled('ul')`
   list-style: none;
   padding: 2rem 0;
   position: absolute;
-  top: 6rem;
+  top: 12rem;
   transition: all .5s ease;
   width: ${props => props.clicked ? "12rem" : '3.5rem'};
 `
 
-export const Item = styled('li')`
+export const Item = styled(NavLink)`
   color: ${colors.white};
   cursor: pointer;
   display: flex;

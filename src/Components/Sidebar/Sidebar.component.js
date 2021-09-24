@@ -1,7 +1,19 @@
 import React, {useState} from "react"
 
 import {Avatar, Calender, Documents, Home, Logo, PowerOff, Projects, Team} from "../../Assets/index";
-import {Button, Details, Item, LogoContainer, Logout, Name, Profile, SidebarContainer, SlickBar, Text} from "./Styles"
+import {
+    Button,
+    Container,
+    Details,
+    Item,
+    LogoContainer,
+    Logout,
+    Name,
+    Profile,
+    SidebarContainer,
+    SlickBar,
+    Text
+} from "./Sidebar.style"
 
 
 const Sidebar = () => {
@@ -9,30 +21,30 @@ const Sidebar = () => {
     const [profileClick, setProfileClick] = useState(false)
 
     return (
-        <>
+        <Container>
             <Button onClick={() => setClick(!click)} clicked={click}/>
             <SidebarContainer>
                 <LogoContainer>
                     <img src={Logo} alt="Logo"/>
                 </LogoContainer>
                 <SlickBar clicked={click}>
-                    <Item>
+                    <Item exact activeClass="active" to="/">
                         <img src={Home} alt="Home"/>
                         <Text clicked={click}>Home</Text>
                     </Item>
-                    <Item>
+                    <Item exact activeClass="active" to="/team">
                         <img src={Team} alt="Team"/>
                         <Text clicked={click}>Team</Text>
                     </Item>
-                    <Item>
+                    <Item exact activeClass="active" to="/calender">
                         <img src={Calender} alt="Calender"/>
                         <Text clicked={click}>Calender</Text>
                     </Item>
-                    <Item>
+                    <Item exact activeClass="active" to="/documents">
                         <img src={Documents} alt="Documents"/>
                         <Text clicked={click}>Documents</Text>
                     </Item>
-                    <Item>
+                    <Item exact activeClass="active" to="/projects">
                         <img src={Projects} alt="Projects"/>
                         <Text clicked={click}>Projects</Text>
                     </Item>
@@ -50,7 +62,7 @@ const Sidebar = () => {
                     </Details>
                 </Profile>
             </SidebarContainer>
-        </>
+        </Container>
     )
 }
 
