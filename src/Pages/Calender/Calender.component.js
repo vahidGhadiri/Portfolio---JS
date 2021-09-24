@@ -1,13 +1,16 @@
 import React from "react"
+import MotionHoc from "../../Hoc/MotionHoc";
 
-const Calender = () => {
+
+const CalenderComponent = () => {
     return (
-        <div>
+        <>
             <h1>
                 Calender
             </h1>
-        </div>
+        </>
     )
 }
 
-export default Calender
+
+export default MotionHoc(CalenderComponent)

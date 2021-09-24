@@ -1,4 +1,5 @@
 import React from "react"
+import MotionHoc from "../../Hoc/MotionHoc";
 
 const Team = () => {
     return (
@@ -10,4 +11,4 @@ const Team = () => {
     )
 }
 
-export default Team
+export default MotionHoc(Team)

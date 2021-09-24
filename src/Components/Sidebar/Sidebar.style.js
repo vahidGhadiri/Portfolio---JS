@@ -5,6 +5,14 @@ import {NavLink} from "react-router-dom";
 
 export const Container = styled('div')`
   position: fixed;
+
+  .active {
+    border-right: 4px solid ${colors.white};
+
+    img {
+      filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+    }
+  }
 `
 
 export const Button = styled('button')`
@@ -88,7 +96,6 @@ export const Item = styled(NavLink)`
   padding: 1rem 0 1rem 1rem;
   text-decoration: none;
   width: 100%;
-
 
   &:hover {
     border-right: 4px solid ${colors.white};

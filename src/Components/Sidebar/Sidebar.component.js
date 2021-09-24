@@ -28,23 +28,23 @@ const Sidebar = () => {
                     <img src={Logo} alt="Logo"/>
                 </LogoContainer>
                 <SlickBar clicked={click}>
-                    <Item exact activeClass="active" to="/">
+                    <Item exact activeClass="active" to="/" onClick={() => setClick(false)}>
                         <img src={Home} alt="Home"/>
                         <Text clicked={click}>Home</Text>
                     </Item>
-                    <Item exact activeClass="active" to="/team">
+                    <Item exact activeClass="active" to="/team" onClick={() => setClick(false)}>
                         <img src={Team} alt="Team"/>
                         <Text clicked={click}>Team</Text>
                     </Item>
-                    <Item exact activeClass="active" to="/calender">
+                    <Item exact activeClass="active" to="/calender" onClick={() => setClick(false)}>
                         <img src={Calender} alt="Calender"/>
                         <Text clicked={click}>Calender</Text>
                     </Item>
-                    <Item exact activeClass="active" to="/documents">
+                    <Item exact activeClass="active" to="/documents" onClick={() => setClick(false)}>
                         <img src={Documents} alt="Documents"/>
                         <Text clicked={click}>Documents</Text>
                     </Item>
-                    <Item exact activeClass="active" to="/projects">
+                    <Item exact activeClass="active" to="/projects" onClick={() => setClick(false)}>
                         <img src={Projects} alt="Projects"/>
                         <Text clicked={click}>Projects</Text>
                     </Item>

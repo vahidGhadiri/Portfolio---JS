@@ -6,6 +6,9 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow: hidden;
+}
 
 body {
   background: $background;
