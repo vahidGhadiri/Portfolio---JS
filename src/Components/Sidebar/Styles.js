@@ -1,6 +1,6 @@
 import styled from "styled-components";
-
 import {colors} from "../../Assets"
+
 
 export const Button = styled('button')`
   align-items: center;
@@ -51,6 +51,7 @@ export const SidebarContainer = styled('div')`
 
 export const LogoContainer = styled(`div`)`
   width: 2rem;
+  visibility: hidden;
 
   img {
     height: auto;
@@ -103,6 +104,81 @@ export const Item = styled('li')`
 export const Text = styled('span')`
   overflow: hidden;
   width: ${props => props.clicked ? "100%" : "0"};
-  margin-left: ${props => props.clicked ? "3rem" : "0"};
-  transition: all .2s ease-in-out;
+  margin-left: ${props => props.clicked ? "1.5rem" : "0"};
+  transition: all .3s ease-in-out;
+`
+
+export const Profile = styled('div')`
+  align-items: center;
+  background-color: ${colors.black};
+  border-radius: 20px;
+  color: ${colors.white};
+  display: flex;
+  justify-content: center;
+  height: 3rem;
+  margin-left: ${props => props.clicked ? "12rem" : "0"};
+  padding: .5rem 1rem;
+  transition: all .3s ease;
+  width: ${props => props.clicked ? "16rem" : "3rem"};
+
+  img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+      border: 2px solid ${colors.gray};
+      padding: 2px;
+    }
+  }
+`
+
+export const Details = styled('div')`
+  align-items: center;
+  display: ${props => props.clicked ? "flex" : "none"};
+  justify-content: space-between;
+  transition: all .3s ease-in-out;
+`
+
+export const Name = styled('div')`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1.5rem;
+
+  h4 {
+    display: inline-block;
+  }
+
+  a {
+    font-size: .8rem;
+    text-decoration: none;
+    color: ${colors.gray};
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+`
+
+export const Logout = styled('button')`
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  background-color: transparent;
+
+  img {
+    width: 100%;
+    height: auto;
+    filter: invert(15%) sepia(70%) saturate(6573%) hue-rotate(2deg) brightness(100%) contrast(126%);
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      border: none;
+      padding: 0;
+      opacity: .5;
+    }
+  }
 `

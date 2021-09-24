@@ -1,11 +1,12 @@
 import React, {useState} from "react"
 
-import {Calender, Documents, Home, Logo, PowerOff, Projects, Team} from "../../Assets/index";
-import {Button, Item, LogoContainer, SidebarContainer, SlickBar, Text} from "./Styles"
+import {Avatar, Calender, Documents, Home, Logo, PowerOff, Projects, Team} from "../../Assets/index";
+import {Button, Details, Item, LogoContainer, Logout, Name, Profile, SidebarContainer, SlickBar, Text} from "./Styles"
 
 
 const Sidebar = () => {
     const [click, setClick] = useState(false)
+    const [profileClick, setProfileClick] = useState(false)
 
     return (
         <>
@@ -36,18 +37,18 @@ const Sidebar = () => {
                         <Text clicked={click}>Projects</Text>
                     </Item>
                 </SlickBar>
-                <div>
-                    {/*<img src={Avatar} alt="Avatar"/>*/}
-                    <div>
-                        <div>
-                            <h4>Vahid Ghadiri</h4>
+                <Profile clicked={profileClick} onClick={() => setProfileClick(!profileClick)}>
+                    <img src={Avatar} alt="Avatar" onClick={() => setProfileClick(!profileClick)}/>
+                    <Details clicked={profileClick}>
+                        <Name>
+                            <h4>Vahid&nbsp;Ghadiri</h4>
                             <a href="/#">View profile</a>
-                        </div>
-                        <button>
+                        </Name>
+                        <Logout>
                             <img src={PowerOff} alt="Logout"/>
-                        </button>
-                    </div>
-                </div>
+                        </Logout>
+                    </Details>
+                </Profile>
             </SidebarContainer>
         </>
     )
