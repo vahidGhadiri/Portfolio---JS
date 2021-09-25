@@ -6,7 +6,7 @@ const MotionHoc = (Component) => {
             <motion.div
                 initial={{y: 500}}
                 animate={{y: 0, transition: {duration: 1, type: "spring"}}}
-                exit={{y: -500, transition: {duration: 1, type: "spring", ease: "easeInOut"}}}
+                exit={{y: -510, transition: {duration: 1, type: "spring", ease: "easeInOut"}}}
             >
                 <Component/>
             </motion.div>

@@ -3,11 +3,9 @@ import MotionHoc from "../../Hoc/MotionHoc";
 
 const Home = () => {
     return (
-        <div>
-            <h1>
-                Home
-            </h1>
-        </div>
+        <>
+            <h2>Home</h2>
+        </>
     )
 }
 

@@ -3,13 +3,8 @@ import MotionHoc from "../../Hoc/MotionHoc";
 
 
 const CalenderComponent = () => {
-    return (
-        <>
-            <h1>
-                Calender
-            </h1>
-        </>
-    )
+    return <h2>Calender</h2>
+
 }
 
 
