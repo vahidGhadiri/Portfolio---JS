@@ -2,15 +2,15 @@
   "user-info": [
     {
       "avatar": "",
-      "birthday": "feb, 1990",
+      "birthday": "Feb, 1990",
       "email": "vahid.ghadiri1990@gmail.com",
-      "fullName": "vahid",
+      "fullName": "Vahid Ghadiri",
       "id": 1,
-      "job": "front-end developer",
-      "location": "ekbatan, tehran",
+      "job": "Front-end Developer",
+      "location": "Ekbatan, Tehran",
       "phone": "09336891141",
-      "githubLink": "",
-      "linkedinLink": ""
+      "githubLink": "https://github.com/vahidGhadiri",
+      "linkedinLink": "https://www.linkedin.com/in/vahidghadiri/"
     }
   ],
   "techStack": [
