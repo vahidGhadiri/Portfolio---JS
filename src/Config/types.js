@@ -1,1 +1,1 @@
-export const GET_USER_INFO = "GET_USER_INFO"
+export const GET_ABOUT_ME_DATA = "GET_ABOUT_ME_DATA"

@@ -1,11 +1,11 @@
 import axios from "axios"
 import * as urls from "../Config/urls"
 
-export const getUserInfo = () => {
+export const getAboutMeData = () => {
     return new Promise((resolve, reject) => {
-        axios.get(`${urls.GET_USER_INFO}`, {
+        axios.get(`${urls.GET_ABOUT_ME_DATA}`, {
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'text/plain'
             }
         })
             .then(response => resolve(response))

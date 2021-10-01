@@ -1,2 +1,2 @@
 //USER INFO
-export const GET_USER_INFO = "localhost:3000/user-info"
+export const GET_ABOUT_ME_DATA = "http://localhost:3000/user-info"
