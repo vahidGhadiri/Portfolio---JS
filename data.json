@@ -1,0 +1,21 @@
+{
+  "userInfo": [
+    {
+      "avatar": "",
+      "birthday": "feb, 1990",
+      "email": "vahid.ghadiri1990@gmail.com",
+      "fullName": "vahid",
+      "id": 1,
+      "job": "front-end developer",
+      "location": "ekbatan, tehran",
+      "phone": "09336891141",
+      "githubLink": "",
+      "linkedinLink": ""
+    }
+  ],
+  "techStack": [
+    {
+      "react": "intermediate"
+    }
+  ]
+}

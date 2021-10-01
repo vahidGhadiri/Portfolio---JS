@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.leftSide {
+  background: red;
+  border-radius: 30px 0 0 30px;
+  padding: 30px;
+  width: 25%;
+  height: 100%;
+}
+
+.rightSide {
+  padding: 30px;
+  background: blue;
+  width: 75%;
+  border-radius: 0 30px 30px 0;
+  overflow: scroll;
+}
