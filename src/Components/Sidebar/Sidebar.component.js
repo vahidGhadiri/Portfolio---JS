@@ -28,23 +28,23 @@ const Sidebar = () => {
                     <img src={Logo} alt="Logo"/>
                 </LogoContainer>
                 <SlickBar clicked={click}>
-                    <Item exact activeClass="active" to="/" onClick={() => setClick(false)}>
+                    <Item exact activeclass="active" to="/" onClick={() => setClick(false)}>
                         <img src={Home} alt="Home"/>
                         <Text clicked={click}>About Me</Text>
                     </Item>
-                    <Item exact activeClass="active" to="/team" onClick={() => setClick(false)}>
+                    <Item exact activeclass="active" to="/team" onClick={() => setClick(false)}>
                         <img src={Team} alt="Team"/>
                         <Text clicked={click}>Tech Stack</Text>
                     </Item>
-                    <Item exact activeClass="active" to="/calender" onClick={() => setClick(false)}>
+                    <Item exact activeclass="active" to="/calender" onClick={() => setClick(false)}>
                         <img src={Calender} alt="Calender"/>
                         <Text clicked={click}>Work Experience</Text>
                     </Item>
-                    <Item exact activeClass="active" to="/documents" onClick={() => setClick(false)}>
+                    <Item exact activeclass="active" to="/documents" onClick={() => setClick(false)}>
                         <img src={Documents} alt="Documents"/>
                         <Text clicked={click}>Documents</Text>
                     </Item>
-                    <Item exact activeClass="active" to="/projects" onClick={() => setClick(false)}>
+                    <Item exact activeclass="active" to="/projects" onClick={() => setClick(false)}>
                         <img src={Projects} alt="Projects"/>
                         <Text clicked={click}>Projects</Text>
                     </Item>
