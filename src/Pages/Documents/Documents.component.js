@@ -1,8 +1,8 @@
 import React from "react"
-import MotionHoc from "../../Hoc/MotionHoc";
+import ComponentWithAnimation from "../../Hoc/componentWithAnimation";
 
 const Documents = () => {
     return <h2>Documents</h2>
 }
 
-export default MotionHoc(Documents)
+export default ComponentWithAnimation(Documents)

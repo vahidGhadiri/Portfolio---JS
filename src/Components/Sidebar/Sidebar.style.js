@@ -4,8 +4,7 @@ import {NavLink} from "react-router-dom";
 
 
 export const Container = styled('div')`
-  position: fixed;
-
+  //position: fixed;
   .active {
     border-right: 4px solid ${colors.white};
 
@@ -86,7 +85,7 @@ export const SlickBar = styled('ul')`
   position: absolute;
   top: 12rem;
   transition: all .5s ease;
-  width: ${props => props.clicked ? "12rem" : '3.5rem'};
+  width: ${props => props.clicked ? "14rem" : '3.5rem'};
 `
 
 export const Item = styled(NavLink)`
@@ -96,6 +95,7 @@ export const Item = styled(NavLink)`
   padding: 1rem 0 1rem 1rem;
   text-decoration: none;
   width: 100%;
+  white-space: nowrap;
 
   &:hover {
     border-right: 4px solid ${colors.white};

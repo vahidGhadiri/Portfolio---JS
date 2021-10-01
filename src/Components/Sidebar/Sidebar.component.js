@@ -30,15 +30,15 @@ const Sidebar = () => {
                 <SlickBar clicked={click}>
                     <Item exact activeClass="active" to="/" onClick={() => setClick(false)}>
                         <img src={Home} alt="Home"/>
-                        <Text clicked={click}>Home</Text>
+                        <Text clicked={click}>About Me</Text>
                     </Item>
                     <Item exact activeClass="active" to="/team" onClick={() => setClick(false)}>
                         <img src={Team} alt="Team"/>
-                        <Text clicked={click}>Team</Text>
+                        <Text clicked={click}>Tech Stack</Text>
                     </Item>
                     <Item exact activeClass="active" to="/calender" onClick={() => setClick(false)}>
                         <img src={Calender} alt="Calender"/>
-                        <Text clicked={click}>Calender</Text>
+                        <Text clicked={click}>Work Experience</Text>
                     </Item>
                     <Item exact activeClass="active" to="/documents" onClick={() => setClick(false)}>
                         <img src={Documents} alt="Documents"/>
