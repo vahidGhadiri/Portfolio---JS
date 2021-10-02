@@ -1,1 +1,2 @@
 export const GET_ABOUT_ME_DATA = "GET_ABOUT_ME_DATA"
+export const SET_IS_ENTERED = "SET_IS_ENTERED"

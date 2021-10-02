@@ -14,7 +14,7 @@ export const Pages = styled.div`
   align-items: center;
 
   h2 {
-    font-size: calc(1rem + 1vw);
+    font-size: calc(.5rem + 1vw);
     background: linear-gradient(to right, #803bec 30%, #1b1b1b 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

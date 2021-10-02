@@ -28,7 +28,7 @@ const Sidebar = () => {
                     <img src={Logo} alt="Logo"/>
                 </LogoContainer>
                 <SlickBar clicked={click}>
-                    <Item exact activeclass="active" to="/" onClick={() => setClick(false)}>
+                    <Item exact activeclass="active" to="/about-me" onClick={() => setClick(false)}>
                         <img src={Home} alt="Home"/>
                         <Text clicked={click}>About Me</Text>
                     </Item>

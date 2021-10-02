@@ -14,16 +14,24 @@ class AboutMe extends React.Component {
     }
 
     render() {
+        const {aboutMe} = this.props
         return (
             <>
                 <motion.div initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: .5}}}
                             className={style.container}>
                     <div className={style.leftSide}>
                         {/*<h2>About me</h2>*/}
+                        <img src={aboutMe.avatar} alt=""/>
+                        <div> {aboutMe.fullName}</div>
+                        <div> {aboutMe.job}</div>
+                        <div> {aboutMe.birthday}</div>
+                        <div> {aboutMe.location}</div>
+                        <div> {aboutMe.email}</div>
+                        <div> {aboutMe.phone}</div>
+
                     </div>
                     <div className={style.border}/>
                     <div className={style.rightSide}>
-                        {/*<h2>Right side</h2>*/}
                     </div>
                 </motion.div>
             </>
