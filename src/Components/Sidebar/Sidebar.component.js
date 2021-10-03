@@ -54,7 +54,7 @@ const Sidebar = () => {
                     <Details clicked={profileClick}>
                         <Name>
                             <h4>Vahid&nbsp;Ghadiri</h4>
-                            <a href="/#">View profile</a>
+                            <a href="/about-me">View profile</a>
                         </Name>
                         <Logout>
                             <img src={PowerOff} alt="Logout"/>
