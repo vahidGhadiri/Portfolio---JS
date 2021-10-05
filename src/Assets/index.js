@@ -2,6 +2,7 @@ import AllMail from "./Images/All Mail.svg"
 import Avatar from "./Images/avatar.jpg"
 import Calender from "./Images/sceduled.svg"
 import Documents from "./Images/draft.svg"
+import Down from "./Images/down.svg"
 import Forum from "./Images/Forum.svg"
 import Home from "./Images/home-solid.svg"
 import Meeting from "./Images/meeting.svg"
@@ -24,6 +25,7 @@ export {
     Avatar,
     Calender,
     Documents,
+    Down,
     Forum,
     Home,
     Important,

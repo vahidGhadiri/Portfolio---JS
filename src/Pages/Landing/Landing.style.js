@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import {motion} from "framer-motion";
 
 import bg from "../../Assets/Images/bg.jpg"
+import {motion} from "framer-motion";
 
 export const Container = styled.div`
   height: 100vh;
@@ -24,7 +24,6 @@ export const Block = styled.div`
   border-radius: 10px;
   padding: 75px;
 `
-
 
 export const ItemGroup = styled.div`
   transition: all .5s ease-in-out;
@@ -69,24 +68,41 @@ export const Intro = styled.div`
   margin-bottom: 50px;
   position: relative;
 
-  h1 {
-    font-family: Poppins, sans-serif;
-    font-size: 150px;
+  h6 {
+    color: #fff;
+    font-size: 40px;
   }
 
   h4 {
     font-size: 50px;
+    color: #fff;
+    margin-top: 10px;
   }
 
   h5 {
-    font-size: 50px;
-    font-family: Birthstone Bounce, sans-serif;
+    font-size: 60px;
+    font-family: Birthstone, sans-serif;
+    font-weight: 500;
+    color: #fff;
+    margin: unset;
   }
+
 `
 
-export const Button = styled(motion.button)`
+export const Enter = styled(motion.div)`
+  cursor: pointer;
   all: unset;
   position: absolute;
   bottom: 20px;
-  font-size: 20px;
+  font-size: 15px;
+  color: white;
+
+  img {
+    cursor: pointer;
+    width: 20px;
+    size: 20px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 5px;
+  }
 `

@@ -17,4 +17,5 @@ const ComponentWithAnimation = (Component) => {
     }
 }
 
+
 export default ComponentWithAnimation

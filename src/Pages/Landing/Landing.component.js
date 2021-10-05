@@ -1,5 +1,9 @@
 import React, {useState} from "react"
-import {Block, Button, Container, Intro, Item, ItemGroup} from "./Landing.style";
+
+import {Block, Container, Enter, Intro, Item, ItemGroup} from "./Landing.style";
+import {Down} from '../../Assets/'
+import {NavLink} from "react-router-dom";
+
 
 const Landing = () => {
     const [blur, setBlur] = useState(false)
@@ -10,16 +14,23 @@ const Landing = () => {
                 <Item onMouseEnter={() => setBlur(true)} onMouseLeave={() => setBlur(false)}>
                     <Block>
                         <Intro>
-                            <h1>HI</h1>
+                            <h6>Hey,</h6>
                             <h4>I'm Vahid!</h4>
                             <h5>Front-end Developer</h5>
                         </Intro>
-                        {blur && <Button
-                            initial={{opacity: 0}}
-                            animate={{
-                                opacity: 1,
-                                transition: {duration: .3, yoyo: Infinity}
-                            }}>Enter</Button>}
+                        {blur &&
+                        <Enter initial={{opacity: 0}}
+                               animate={{
+                                   opacity: .8,
+                                   transition: {
+                                       duration: 1,
+                                       yoyo: Infinity
+                                   }
+                               }}>
+                            <NavLink to={'./about-me'}>
+                                <img src={Down} alt="enter to my portfolio"/>
+                            </NavLink>
+                        </Enter>}
                     </Block>
                 </Item>
             </ItemGroup>
