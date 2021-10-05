@@ -37,7 +37,7 @@ export const ItemGroup = styled.div`
 `
 
 
-export const Item = styled.div`
+export const Item = styled(motion.div)`
   backdrop-filter: none !important;
   z-index: 10;
   display: flex;

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react"
+import React, {useState} from "react"
 import {useHistory} from "react-router";
 
 import {Block, Container, Enter, Intro, Item, ItemGroup} from "./Landing.style";
@@ -7,18 +7,7 @@ import {Down} from '../../Assets/'
 
 const Landing = () => {
     const [blur, setBlur] = useState(false)
-    const [offsetY, setOffsetY] = useState(0)
-
-    const handleScroll = () => {
-        console.log(window.pageYOffset)
-        setOffsetY(window.pageYOffset)
-    }
     const history = useHistory()
-
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll)
-        return () => window.removeEventListener("scroll", handleScroll)
-    })
 
     const EnterVariant = {
         initial: {opacity: 0},
@@ -32,9 +21,12 @@ const Landing = () => {
     }
 
     return (
-        <Container style={{transform: `translateY(${offsetY * .5})px`}} onClick={handleScroll}>
+        <Container>
             <ItemGroup blured={blur}>
-                <Item onMouseEnter={() => setBlur(true)} onMouseLeave={() => setBlur(false)}>
+                <Item onMouseEnter={() => setBlur(true)} onMouseLeave={() => setBlur(false)}
+                      initial={{opacity: 0}} animate={{opacity: 1, transition: {duration: .8}}}
+                      exit={{opacity: 0, transition: {duration: .5, ease: "easeInOut"}}}
+                >
                     <Block>
                         <Intro>
                             <h6>Hey,</h6>

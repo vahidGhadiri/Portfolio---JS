@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import {colors} from "../../Assets"
 import {NavLink} from "react-router-dom";
+import {motion} from "framer-motion";
 
 
-export const Container = styled('div')`
+export const Container = styled(motion.div)`
   z-index: 100;
 
   .active {

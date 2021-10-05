@@ -1,10 +1,11 @@
 import React from "react"
 import {connect} from "react-redux";
 
-import ComponentWithAnimation from "../../Hoc/componentWithAnimation";
+import ComponentWithLayOut from "../../Hoc/componentWithAnimation";
 
 import {setAboutMeData, setIsEntered} from "../../Redux/actions/portfolio.action";
 import {Container} from "./AboutMe.style";
+import {Sidebar} from "../../Components";
 
 
 class AboutMe extends React.Component {
@@ -21,8 +22,10 @@ class AboutMe extends React.Component {
     render() {
         return (
             <>
-                <Container>
-                    <h2>About me</h2>
+                <Sidebar/>
+                <Container initial={{opacity: 0}}
+                           animate={{opacity: 1, transition: {duration: 1, ease: "easeInOut", delay: 0.5}}}>
+                    Everything should render here!
                 </Container>
             </>
         )
@@ -40,4 +43,4 @@ const mapDispatchToProps = (dispatch) => ({
     setIsEntered: (data) => dispatch(setIsEntered(data))
 })
 
-export default ComponentWithAnimation(connect(mapStateToProps, mapDispatchToProps)(AboutMe))
+export default ComponentWithLayOut(connect(mapStateToProps, mapDispatchToProps)(AboutMe))

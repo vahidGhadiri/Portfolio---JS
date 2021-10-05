@@ -1,10 +1,15 @@
 import React from "react"
-import {MainLayout} from "./Layout.style";
+import {Backdrop, Main, MainLayout} from "./Layout.style";
 
 const Layout = (props) => {
     return (
         <MainLayout>
-            {props.children}
+            <Backdrop initial={{opacity: 0}}
+                      animate={{opacity: 1, transition: {duration: .5, delay: .3, ease: "easeInOut"}}}>
+                <Main>
+                    {props.children}
+                </Main>
+            </Backdrop>
         </MainLayout>
     )
 }

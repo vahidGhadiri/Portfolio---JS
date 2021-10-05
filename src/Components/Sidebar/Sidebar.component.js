@@ -6,7 +6,7 @@ import {Container, Item, SlickBar, Text} from "./Sidebar.style"
 
 const Sidebar = () => {
     const [click, setClick] = useState(false)
-    const [profileClick, setProfileClick] = useState(false)
+    // const [profileClick, setProfileClick] = useState(false)
 
     return (
         <Container>

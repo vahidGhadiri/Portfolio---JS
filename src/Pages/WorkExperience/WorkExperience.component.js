@@ -1,8 +1,9 @@
 import React from "react"
 import {connect} from "react-redux";
 
-import ComponentWithAnimation from "../../Hoc/componentWithAnimation";
+import ComponentWithLayOut from "../../Hoc/componentWithAnimation";
 import {setIsEntered} from "../../Redux/actions/portfolio.action";
+import {Container} from "./WorkExperience.style";
 
 
 class WorkExperience extends React.Component {
@@ -17,9 +18,9 @@ class WorkExperience extends React.Component {
 
     render() {
         return (
-            <>
+            <Container>
                 <h2> Work Experience</h2>
-            </>
+            </Container>
         )
 
     }
@@ -31,4 +32,4 @@ const mapDispatchToProps = (dispatch) => ({
     setIsEntered: (data) => dispatch(setIsEntered(data))
 })
 
-export default ComponentWithAnimation(connect(null, mapDispatchToProps)(WorkExperience))
+export default ComponentWithLayOut(connect(null, mapDispatchToProps)(WorkExperience))

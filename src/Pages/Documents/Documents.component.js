@@ -1,8 +1,9 @@
 import React from "react"
 import {connect} from "react-redux";
 
-import ComponentWithAnimation from "../../Hoc/componentWithAnimation";
+import ComponentWithLayOut from "../../Hoc/componentWithAnimation";
 import {setIsEntered} from "../../Redux/actions/portfolio.action";
+import {Container} from "./Document.style";
 
 
 class Documents extends React.Component {
@@ -17,9 +18,9 @@ class Documents extends React.Component {
 
     render() {
         return (
-            <>
-             <h2>Documents</h2>
-            </>
+            <Container>
+                <h2>Documents</h2>
+            </Container>
         )
 
     }
@@ -31,4 +32,4 @@ const mapDispatchToProps = (dispatch) => ({
     setIsEntered: (data) => dispatch(setIsEntered(data))
 })
 
-export default ComponentWithAnimation(connect(null, mapDispatchToProps)(Documents))
+export default ComponentWithLayOut(connect(null, mapDispatchToProps)(Documents))
