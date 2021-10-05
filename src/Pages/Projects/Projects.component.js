@@ -1,8 +1,34 @@
 import React from "react"
-import ComponentWithAnimation from "../../Hoc/componentWithAnimation";
+import {connect} from "react-redux";
 
-const Projects = () => {
-    return <h2>Projects</h2>
+import ComponentWithAnimation from "../../Hoc/componentWithAnimation";
+import {setIsEntered} from "../../Redux/actions/portfolio.action";
+
+
+class Projects extends React.Component {
+
+    componentDidMount() {
+        this.props.setIsEntered(true)
+    }
+
+    componentWillUnmount() {
+        this.props.setIsEntered(false)
+    }
+
+    render() {
+        return (
+            <>
+                <h2>Projects</h2>
+            </>
+        )
+
+    }
+
 }
 
-export default ComponentWithAnimation(Projects)
+
+const mapDispatchToProps = (dispatch) => ({
+    setIsEntered: (data) => dispatch(setIsEntered(data))
+})
+
+export default ComponentWithAnimation(connect(null, mapDispatchToProps)(Projects))

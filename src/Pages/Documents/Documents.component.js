@@ -1,8 +1,34 @@
 import React from "react"
-import ComponentWithAnimation from "../../Hoc/componentWithAnimation";
+import {connect} from "react-redux";
 
-const Documents = () => {
-    return <h2>Documents</h2>
+import ComponentWithAnimation from "../../Hoc/componentWithAnimation";
+import {setIsEntered} from "../../Redux/actions/portfolio.action";
+
+
+class Documents extends React.Component {
+
+    componentDidMount() {
+        this.props.setIsEntered(true)
+    }
+
+    componentWillUnmount() {
+        this.props.setIsEntered(false)
+    }
+
+    render() {
+        return (
+            <>
+             <h2>Documents</h2>
+            </>
+        )
+
+    }
+
 }
 
-export default ComponentWithAnimation(Documents)
+
+const mapDispatchToProps = (dispatch) => ({
+    setIsEntered: (data) => dispatch(setIsEntered(data))
+})
+
+export default ComponentWithAnimation(connect(null, mapDispatchToProps)(Documents))

@@ -4,7 +4,8 @@ import {NavLink} from "react-router-dom";
 
 
 export const Container = styled('div')`
-  //position: fixed;
+  z-index: 100;
+
   .active {
     border-right: 4px solid ${colors.white};
 
@@ -47,30 +48,6 @@ export const Button = styled('button')`
   }
 `
 
-export const SidebarContainer = styled('div')`
-  align-items: center;
-  background-color: ${colors.black};
-  border-radius: 0 30px 30px 0;
-  display: flex;
-  flex-direction: column;
-  height: 80vh;
-  margin-top: 1rem;
-  justify-content: space-between;
-  padding: 1rem 0;
-  position: relative;
-  width: 3.5rem;
-`
-
-export const LogoContainer = styled(`div`)`
-  width: 2rem;
-  visibility: hidden;
-
-  img {
-    height: auto;
-    width: 100%;
-  }
-`
-
 export const SlickBar = styled('ul')`
   align-items: center;
   background-color: ${colors.black};
@@ -79,11 +56,13 @@ export const SlickBar = styled('ul')`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  top: 50%;
+  transform: translateY(-50%);
   left: 0;
   list-style: none;
-  padding: 2rem 0;
+  padding: 3rem 0;
   position: absolute;
-  top: 12rem;
+  //top: 12rem;
   transition: all .5s ease;
   width: ${props => props.clicked ? "14rem" : '3.5rem'};
 `
@@ -118,32 +97,6 @@ export const Text = styled('span')`
   width: ${props => props.clicked ? "100%" : "0"};
   margin-left: ${props => props.clicked ? "1.5rem" : "0"};
   transition: all .3s ease-in-out;
-`
-
-export const Profile = styled('div')`
-  align-items: center;
-  background-color: ${colors.black};
-  border-radius: 20px;
-  color: ${colors.white};
-  display: flex;
-  justify-content: center;
-  height: 3rem;
-  margin-left: ${props => props.clicked ? "12rem" : "0"};
-  padding: .5rem 1rem;
-  transition: all .3s ease;
-  width: ${props => props.clicked ? "16rem" : "3rem"};
-
-  img {
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    cursor: pointer;
-
-    &:hover {
-      border: 2px solid ${colors.gray};
-      padding: 2px;
-    }
-  }
 `
 
 export const Details = styled('div')`

@@ -1,12 +1,24 @@
-import React, {useState} from "react"
+import React, {useEffect, useState} from "react"
+import {useHistory} from "react-router";
 
 import {Block, Container, Enter, Intro, Item, ItemGroup} from "./Landing.style";
 import {Down} from '../../Assets/'
-import {NavLink} from "react-router-dom";
 
 
 const Landing = () => {
     const [blur, setBlur] = useState(false)
+    const [offsetY, setOffsetY] = useState(0)
+
+    const handleScroll = () => {
+        console.log(window.pageYOffset)
+        setOffsetY(window.pageYOffset)
+    }
+    const history = useHistory()
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll)
+        return () => window.removeEventListener("scroll", handleScroll)
+    })
 
     const EnterVariant = {
         initial: {opacity: 0},
@@ -19,9 +31,8 @@ const Landing = () => {
         }
     }
 
-
     return (
-        <Container>
+        <Container style={{transform: `translateY(${offsetY * .5})px`}} onClick={handleScroll}>
             <ItemGroup blured={blur}>
                 <Item onMouseEnter={() => setBlur(true)} onMouseLeave={() => setBlur(false)}>
                     <Block>
@@ -32,9 +43,9 @@ const Landing = () => {
                         </Intro>
                         {blur &&
                         <Enter variants={EnterVariant} initial={EnterVariant.initial} animate={EnterVariant.animate}>
-                            <NavLink to={'./about-me'}>
+                            <div onClick={() => history.push('/about-me')}>
                                 <img src={Down} alt="enter to my portfolio"/>
-                            </NavLink>
+                            </div>
                         </Enter>}
                     </Block>
                 </Item>
