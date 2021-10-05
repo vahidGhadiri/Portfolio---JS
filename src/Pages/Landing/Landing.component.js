@@ -8,6 +8,18 @@ import {NavLink} from "react-router-dom";
 const Landing = () => {
     const [blur, setBlur] = useState(false)
 
+    const EnterVariant = {
+        initial: {opacity: 0},
+        animate: {
+            opacity: .8, transition: {
+                duration: .8,
+                yoyo: Infinity,
+                ease: 'easeInOut'
+            }
+        }
+    }
+
+
     return (
         <Container>
             <ItemGroup blured={blur}>
@@ -19,14 +31,7 @@ const Landing = () => {
                             <h5>Front-end Developer</h5>
                         </Intro>
                         {blur &&
-                        <Enter initial={{opacity: 0}}
-                               animate={{
-                                   opacity: .8,
-                                   transition: {
-                                       duration: 1,
-                                       yoyo: Infinity
-                                   }
-                               }}>
+                        <Enter variants={EnterVariant} initial={EnterVariant.initial} animate={EnterVariant.animate}>
                             <NavLink to={'./about-me'}>
                                 <img src={Down} alt="enter to my portfolio"/>
                             </NavLink>
