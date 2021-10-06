@@ -1,9 +1,10 @@
 import React from "react"
 import {connect} from "react-redux";
 
-import ComponentWithLayOut from "../../Hoc/componentWithAnimation";
+import ComponentWithLayOut from "../../Hoc/componentWithLayout";
 import {setIsEntered} from "../../Redux/actions/portfolio.action";
 import {Container} from "./Document.style";
+import {Sidebar} from "../../Components";
 
 
 class Documents extends React.Component {
@@ -18,9 +19,12 @@ class Documents extends React.Component {
 
     render() {
         return (
-            <Container>
-                <h2>Documents</h2>
-            </Container>
+            <>
+                <Container>
+                    <h2>Documents</h2>
+                </Container>
+            </>
+
         )
 
     }

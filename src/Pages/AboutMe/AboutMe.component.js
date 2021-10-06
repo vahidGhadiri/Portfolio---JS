@@ -1,11 +1,10 @@
 import React from "react"
 import {connect} from "react-redux";
 
-import ComponentWithLayOut from "../../Hoc/componentWithAnimation";
+import ComponentWithLayOut from "../../Hoc/componentWithLayout";
 
 import {setAboutMeData, setIsEntered} from "../../Redux/actions/portfolio.action";
 import {Container} from "./AboutMe.style";
-import {Sidebar} from "../../Components";
 
 
 class AboutMe extends React.Component {
@@ -21,13 +20,12 @@ class AboutMe extends React.Component {
 
     render() {
         return (
-            <>
-                <Sidebar/>
+            <div>
                 <Container initial={{opacity: 0}}
                            animate={{opacity: 1, transition: {duration: 1, ease: "easeInOut", delay: 0.5}}}>
-                    Everything should render here!
+                    <h3>Hier soll alles präsentiert werden!</h3>
                 </Container>
-            </>
+            </div>
         )
 
     }

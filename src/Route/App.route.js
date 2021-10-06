@@ -12,7 +12,7 @@ const App = (props) => {
     const location = useLocation();
     return (
         <Root>
-            {/*{props.isEntered && <Sidebar/>}*/}
+            {props.isEntered && <Sidebar/>}
             <Pages>
                 <AnimatePresence exitBeforeEnter>
                     <Switch location={location} key={location.pathname}>

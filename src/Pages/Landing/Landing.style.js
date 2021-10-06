@@ -11,6 +11,7 @@ export const Container = styled.div`
   background-size: cover;
   transition: all .5s ease-in-out;
   z-index: 5;
+  white-space: nowrap;
 `
 export const Block = styled.div`
   transition: all .5s ease-in-out;
@@ -32,19 +33,20 @@ export const ItemGroup = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  backdrop-filter: ${props => props.blured ? "blur(10px)" : ""};
+  backdrop-filter: ${props => props.blured && "blur(10px)"};
   background: rgba(0, 0, 0, 0.05);
+
 `
 
 
 export const Item = styled(motion.div)`
-  backdrop-filter: none !important;
   z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
   position: relative;
+
 
   &:hover {
     backdrop-filter: none;

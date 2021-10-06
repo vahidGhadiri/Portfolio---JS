@@ -25,7 +25,7 @@ const Landing = () => {
             <ItemGroup blured={blur}>
                 <Item onMouseEnter={() => setBlur(true)} onMouseLeave={() => setBlur(false)}
                       initial={{opacity: 0}} animate={{opacity: 1, transition: {duration: .8}}}
-                      exit={{opacity: 0, transition: {duration: .5, ease: "easeInOut"}}}
+                      exit={{opacity: 0, transition: {duration: .5, ease: "easeInOut", blur: 10}}}
                 >
                     <Block>
                         <Intro>

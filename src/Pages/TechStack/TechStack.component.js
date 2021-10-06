@@ -1,7 +1,7 @@
 import React from "react"
 import {connect} from "react-redux";
 
-import ComponentWithLayOut from "../../Hoc/componentWithAnimation";
+import ComponentWithLayOut from "../../Hoc/componentWithLayout";
 import {setIsEntered} from "../../Redux/actions/portfolio.action";
 import {Container} from "./TechStack.style";
 
