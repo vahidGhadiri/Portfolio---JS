@@ -18,14 +18,21 @@ import Spam from "./Images/spam.svg"
 import Team from "./Images/social.svg"
 import Trash from "./Images/trash.svg"
 
+import DU from "./Images/DU.png"
+import EN from "./Images/EN.png"
+import FA from "./Images/FA.png"
+
 
 //IMAGES
 export {
     AllMail,
     Avatar,
     Calender,
+    DU,
     Documents,
     Down,
+    EN,
+    FA,
     Forum,
     Home,
     Important,

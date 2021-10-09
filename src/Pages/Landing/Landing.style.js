@@ -25,7 +25,6 @@ export const Block = styled.div`
   border-radius: 10px;
   padding: 75px;
 `
-
 export const ItemGroup = styled.div`
   transition: all .5s ease-in-out;
   width: 100%;
@@ -37,8 +36,6 @@ export const ItemGroup = styled.div`
   background: rgba(0, 0, 0, 0.05);
 
 `
-
-
 export const Item = styled(motion.div)`
   z-index: 10;
   display: flex;
@@ -58,10 +55,7 @@ export const Item = styled(motion.div)`
     background: url(${bg}) no-repeat fixed center;
     background-size: cover;
   }
-}
-`
-
-
+}`
 export const Intro = styled.div`
   display: flex;
   flex-direction: column;
@@ -90,7 +84,6 @@ export const Intro = styled.div`
   }
 
 `
-
 export const Enter = styled(motion.div)`
   cursor: pointer;
   all: unset;
@@ -108,3 +101,22 @@ export const Enter = styled(motion.div)`
     padding: 5px;
   }
 `
+export const Languages = styled(motion.div)`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  img {
+    margin-top: 5px;
+    width: 35px;
+    height: 35px;
+  }
+`
+
