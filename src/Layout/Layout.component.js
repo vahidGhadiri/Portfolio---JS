@@ -1,12 +1,12 @@
 import React from "react"
 import {Backdrop, Main, MainLayout} from "./Layout.style";
 
-const Layout = (props) => {
+const Layout = ({children}) => {
     return (
         <MainLayout>
             <Backdrop>
                 <Main>
-                    {props.children}
+                    {children}
                 </Main>
             </Backdrop>
         </MainLayout>

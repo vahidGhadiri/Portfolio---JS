@@ -8,11 +8,11 @@ import {Pages, Root} from "./App.style";
 import {Sidebar} from "../Components";
 
 
-const App = (props) => {
+const App = ({isEntered}) => {
     const location = useLocation();
     return (
         <Root>
-            {props.isEntered && <Sidebar/>}
+            {isEntered && <Sidebar/>}
             <Pages>
                 <AnimatePresence exitBeforeEnter>
                     <Switch location={location} key={location.pathname}>

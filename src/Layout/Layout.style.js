@@ -20,5 +20,5 @@ export const Backdrop = styled(motion.div)`
 export const Main = styled.div`
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  width: 80%;
+  width: 70%;
 `

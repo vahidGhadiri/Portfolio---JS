@@ -4,7 +4,7 @@ import {connect} from "react-redux";
 import ComponentWithLayOut from "../../Hoc/componentWithLayout";
 
 import {setAboutMeData, setIsEntered} from "../../Redux/actions/portfolio.action";
-import {Container} from "./AboutMe.style";
+import {Avatar, Container, Description, Info, InfoItem, LeftSide, RightSide} from "./AboutMe.style";
 
 
 class AboutMe extends React.Component {
@@ -19,11 +19,29 @@ class AboutMe extends React.Component {
     }
 
     render() {
+        const {avatar, fullName, job, birthday, email, phone, location, description} = this.props.aboutMe
         return (
             <div>
                 <Container initial={{opacity: 0}}
                            animate={{opacity: 1, transition: {duration: 1, ease: "easeInOut", delay: 0.5}}}>
-                    <h3>Hier soll alles präsentiert werden!</h3>
+                    <LeftSide>
+                        <Avatar src={avatar}/>
+                        <Info>
+                            <InfoItem><span>Name:</span>{fullName}</InfoItem>
+                            <InfoItem><span>Title:</span>{job}</InfoItem>
+                            <InfoItem><span>Date of Birth:</span>{birthday}</InfoItem>
+                            <InfoItem><span>Email:</span>{email}</InfoItem>
+                            <InfoItem><span>Phone:</span>{phone}</InfoItem>
+                            <InfoItem><span>Location:</span>{location}</InfoItem>
+                        </Info>
+                    </LeftSide>
+
+                    <RightSide>
+                        <Description>
+                            <h1>Description</h1>
+                            <p>{description}</p>
+                        </Description>
+                    </RightSide>
                 </Container>
             </div>
         )
